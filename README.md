@@ -71,7 +71,7 @@ For chain-of-thought fine-tuning, use `fast_estimate_compute_gradients.py`.
 
 This file will save the projection matrix and all projected gradients under a `./gradients/` folder. Please create the folder before usage. 
 
-```python
+```bash
 python fast_estimate_compute_gradients.py --dataset_key strategy_qa --model_key flan_t5_base --preset_key ft_cot_t70_64aug\
 			--load_model_dir flan_t5_base_strategy_qa_ft_cot_t70_64aug_lora_r_16_new_run_0/epoch_epoch=17\
      --train_lora --lora_rank 16 --lora_alpha 128 \
@@ -89,7 +89,7 @@ For chain-of-thought fine-tuning, use `fast_estimate_linear_model.py`.
 
 Inside the file, one can modify the subsets collection file under `./sampled_tasks/` to specify the sampled subsets of tasks. Usually, it should be randomly sampled subsets. 
 
-```
+```bash
 python fast_estimate_linear_regression.py --dataset_key strategy_qa --model_key flan_t5_base --preset_key ft_cot_t70_64aug\
     --load_model_dir flan_t5_base_strategy_qa_ft_cot_t70_64aug_lora_r_16_new_run_0/epoch_epoch=17\
     --train_lora --lora_rank 16 --lora_alpha 128 \
