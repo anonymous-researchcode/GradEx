@@ -4,7 +4,18 @@ This code provides the implementation to conduct gradient-based (first-order) es
 
 ### Requirements
 
-We list the package requirements under each folder. Please refer to packages listed in the requirements `requirements.txt`. 
+To build up the environment, please run following commands.
+
+```bash
+conda create -n sfmd python=3.10
+conda activate sfmd
+pip install -r requirements.txt 
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu124  # check the correct version for pytorch nightly about CUDA
+mkdir ./data
+mkdir ./results
+mkdir ./external_lightning_logs
+python setup.py develop
+```
 
 ### Data Preparation
 
